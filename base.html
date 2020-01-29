@@ -1,0 +1,153 @@
+{{define "resources"}}
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+ {{end}}   
+
+
+
+{{define "navbar"}}
+<nav class="navbar">
+  <a class="navbar-brand" href="home"><img src="css/b.jpeg" width="30" height="30" class="d-inline-block align-top" alt="BiFrost">  BiFrost</a>
+</nav>
+{{end}}
+
+{{define "detailed-environment"}}
+<p style="text-align: center;font-size: 40px;">hulk detailed view</p>
+        <div class="container" style="border-bottom: 1px solid black;">
+            <a href="#hulk-qa-detailed" class="hulk-qa-detailed" style="cursor: pointer;">
+                <div class="rectangle" id="qa" 
+                    style="background-color: dodgerblue; color: whitesmoke;">
+                    <h4>QA</h4>
+                </div>
+            </a>
+            <a href="#hulk-hqa-detailed" class="hulk-hqa-detailed" style="cursor: pointer;">
+                <div class="rectangle" id="hqa"
+                    style="background-color:rgb(219, 140, 61); color: whitesmoke;" >
+                    <h4>HQA</h4>
+                </div>
+            </a>
+            <a href="#hulk-uat-detailed" class="hulk-uat-detailed" style="cursor: pointer;">
+                <div class="rectangle" id="uat"
+                    style="background-color: rgb(219, 146, 213); color: whitesmoke;">
+                    <h4>UAT</h4>
+                </div>
+            </a>
+            <a href="#hulk-prod-detailed" class="hulk-prod-detailed" style="cursor: pointer;">
+                <div class="rectangle" id="prod"
+                    style="background-color: rgb(218, 78, 78);color: whitesmoke;">
+                    <h4>Prod</h4>
+                </div>
+            </a>
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+{{end}}
+
+
+
+
+{{define "detailed-header"}}
+<div class="container">
+  <div class="row" style="background-color: rgb(210, 214, 218);padding-top: 10px;">
+      <div class="col-3">&nbsp;</div>
+      <div class="col-3">
+          <h5>Pods</h5>
+      </div>
+      <div class="col-3">
+          <h5>Version</h5>
+      </div>
+      <div class="col-3">
+          <h5>Action</h5>
+      </div>
+  </div>
+</div>
+&nbsp;
+{{end}}
+
+
+
+
+
+{{define "footer"}}
+&nbsp;
+<footer class="page-footer font-small fixed-bottom" >
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://www.bigbasket.com" target="_blank"> BigBasket</a>
+      </div>
+    </footer>
+ {{end}}  
+
+
+{{define "chevron"}}
+ <p style="text-align: center;font-size: 2rem;">Hulk</p>
+ <div class="container" style="position: relative; text-align: right;">
+         <div class="chevron ">
+           <div class="chevron-inner">
+             <div class="chevron-content"><h5>QA</h5></div>
+         </div>
+         </div>&nbsp;&nbsp;&nbsp;
+       <div class="chevron-hqa">
+         <div class="chevron-hqa-inner">
+           <div class="chevron-hqa-content"><h5>HQA</h5></div>
+       </div>
+       </div>&nbsp;&nbsp;&nbsp;
+     <div class="chevron-uat">
+       <div class="chevron-uat-inner">
+         <div class="chevron-uat-content"><h5>UAT</h5></div>
+     </div>
+     </div>&nbsp;&nbsp;&nbsp;
+   <div class="chevron-prod">
+     <div class="chevron-prod-inner">
+       <div class="chevron-prod-content"><h5>Prod</h5></div>
+   </div>
+   </div>
+
+     <hr>
+ </div>
+ &nbsp;
+ &nbsp;
+ &nbsp;
+{{end}}
+
+
+
+
+
+ {{define "hulk"}}
+ <div class="row">
+  <div class="col-1">&nbsp;</div>
+  <div class="col-lg-3 col-md-3 col-sm-12">
+    <h4><a href="#" style="text-decoration: underline;">{{.}}</a></h4>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-12" >
+    <h4 style="color: dodgerblue ; display: inline;">Version1
+    <div class="dropdown" style="display: inline;">
+      <i class="fa fa-ellipsis-v" data-toggle="dropdown" style="cursor: pointer;"></i>
+      <div class="dropdown-menu">
+        <a href="#" class="dropdown-item" style="color:rgb(20, 221, 121); text-decoration: underline;">Promote</a>
+        <a href="#" class="dropdown-item" style="color:rgb(228, 149, 69); text-decoration: underline;">Rollback</a>
+        <a href="#" class="dropdown-item" style="color: tomato; text-decoration: underline;">Delete</a>
+      </div>
+    </div>
+    </h4>
+</div>
+<div class=" col-lg-2 col-md-2 col-sm-12" >
+<h4 style="color:rgb(219, 140, 61)  ;">version2</h4>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-12" >
+<h4 style="color: rgb(219, 146, 213);">version3</h4>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-12">
+<h4 style="color: rgb(218, 78, 78);" >version4</h4>
+</div>
+</div>
+<hr>
+{{end}}
